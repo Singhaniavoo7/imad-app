@@ -8,20 +8,21 @@ app.use(morgan('combined'));
 
 var articleOne={
     title: 'Article One I Vishal Singhania',
-    heading: 'Article One,
+    heading: 'Article One',
     date: 'sep 29,2017',
-    content: ' <p>
-                    This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-                        This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                </p>
-                <p>
-                    This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-                       This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                </p>
-                <p>
-                    This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-                        This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                </p>'
+    content: `
+        <p>
+            This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+                This is the content for my first article. This is the content for my first article. This is the content for my first article.
+        </p>
+        <p>
+            This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+                This is the content for my first article. This is the content for my first article. This is the content for my first article.
+        </p>
+        <p>
+            This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+                This is the content for my first article. This is the content for my first article. This is the content for my first article.
+        </p>`
 };
 
 function createTemplate(data)
@@ -29,8 +30,8 @@ function createTemplate(data)
     var title = data.title;
     var date = data.date;
     var heading = data.heading; 
-    var content = data.co ntent;
-    var htmlTemplate= '
+    var content = data.content;
+    var htmlTemplate= `
     <html>
         <head>
             <title>
@@ -57,7 +58,7 @@ function createTemplate(data)
             </div>
         </body>
     </html>
-    ';
+    `;
     return htmlTemplate;
     }
 
